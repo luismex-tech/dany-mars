@@ -1,0 +1,331 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FADBD8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #F5F1E9;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+h1 {
+    font-weight: 600;
+    color: #A999D9;
+    margin-bottom: 0.4rem;
+}
+p {
+    font-weight: 300;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+.service-card {
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(169,153,217,0.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+}
+.service-name {
+    font-weight: 600;
+    color: #5D4E99;
+    margin-bottom: 0.4rem;
+}
+.service-price {
+    font-weight: 500;
+    color: #7D6AAD;
+    margin-bottom: 0.75rem;
+}
+.card-controls {
+    display: flex;
+    gap: 1rem;
+}
+.card-controls button {
+    background: #A999D9;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(169,153,217,0.4);
+    transition: background 0.3s ease;
+}
+.card-controls button:hover {
+    background: #8B7ECD;
+}
+
+.faqs {
+    padding: 1rem 1rem 3rem 1rem;
+    background: #E6E6FA;
+}
+.faqs h2 {
+    color: #5D4E99;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.accordion {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.accordion-item + .accordion-item {
+    margin-top: 0.75rem;
+}
+.accordion-header {
+    background: #F5F1E9;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    font-weight: 600;
+    color: #5D4E99;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background 0.25s ease;
+}
+.accordion-header:hover {
+    background: #D2C9F0;
+}
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease;
+    font-weight: 400;
+    color: #333;
+}
+.accordion-header.active + .accordion-panel {
+    padding: 0.75rem 1rem;
+    max-height: 400px;
+}
+
+#cart-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #F7A8A8;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(247,168,168,0.6);
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cart-count {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #5D4E99;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 999;
+}
+.modal.hidden {
+    display: none;
+}
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 6px 18px rgba(101,86,155,0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.modal-content button#modal-close,
+.modal-content button#cart-close,
+.modal-content button#form-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #5D4E99;
+}
+
+.modal-images {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.modal-images img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(169,153,217,0.3);
+    cursor: pointer;
+}
+.modal-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.modal-controls button {
+    background: #A999D9;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(169,153,217,0.5);
+}
+.modal-controls button:hover {
+    background: #8B7ECD;
+}
+#modal-quantity {
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 40px;
+    text-align: center;
+}
+
+#cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+}
+.cart-item span {
+    font-weight: 500;
+}
+#cart-total {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#finalize-btn {
+    background: #A999D9;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+#finalize-btn:disabled {
+    background: #CCC;
+    cursor: not-allowed;
+}
+
+.form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.form-step.hidden {
+    display: none;
+}
+form label {
+    font-weight: 600;
+    color: #5D4E99;
+}
+form input, form select {
+    padding: 0.5rem;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+form button {
+    background: #F7A8A8;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+form button:disabled {
+    background: #CCC;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    #cart-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;      /* Verde WhatsApp */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    color: #fff;              /* Icono blanco */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Manicura Elegante",
+        "price": 28,
+        "description": "Manicura profesional con esmaltado semipermanente y diseño personalizado.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_1.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 2,
+        "name": "Pedicura Relax",
+        "price": 42,
+        "description": "Pedicura completa con exfoliación, masaje y esmalte de larga duración.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/pedicura_relax_2.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 3,
+        "name": "Peinado Glamour",
+        "price": 55,
+        "description": "Peinado sofisticado para eventos especiales, acabado perfecto y duradero.",
+        "images": ["https://media.glamour.mx/photos/626013edb346b61628e2cc72/16:9/w_2560%2Cc_limit/peinadosparafiesta.jpg", "https://media.glamour.mx/photos/626013edb346b61628e2cc72/16:9/w_2560%2Cc_limit/peinadosparafiesta.jpg"]
+    },
+    {
+        "id": 4,
+        "name": "Maquillaje de Noche",
+        "price": 65,
+        "description": "Maquillaje profesional para la noche, con productos de alta calidad y duración.",
+        "images": ["https://maquillajesencillo.com/wp-content/uploads/2024/08/maquillaje-para-noche-de-fiesta.jpg", "https://maquillajesencillo.com/wp-content/uploads/2024/08/maquillaje-para-novia-natural.jpg"]
+    },
+    {
+        "id": 5,
+        "name": "Depilación Facial Cera",
+        "price": 32,
+        "description": "Depilación con cera tibia para rostro, suave y duradera.",
+        "images": ["https://www.materialestetica.com/blog/wp-content/uploads/2022/03/cera-depilar-rostro-733.png", "https://aprende.com/wp-content/uploads/2022/02/Aceite-girasol-depilacion-con-cera.png"]
+    },
+    {
+        "id": 6,
+        "name": "Limpieza Profunda",
+        "price": 58,
+        "description": "Limpieza facial profunda para rejuvenecer y revitalizar la piel.",
+        "images": ["https://drapamelamoquete.com/wp-content/uploads/2023/08/limpiezaprofunda_hidratacion-1024x682.webp", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 7,
+        "name": "Masaje Antiestrés",
+        "price": 72,
+        "description": "Masaje relajante para aliviar tensión muscular y estrés diario.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_1.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 8,
+        "name": "Extensiones de Pestañas Deluxe",
+        "price": 48,
+        "description": "Extensiones de pestañas con efecto natural y duración prolongada.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_1.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 9,
+        "name": "Tratamiento Capilar Nutritivo",
+        "price": 67,
+        "description": "Tratamiento intensivo para cabello seco y dañado, con ingredientes naturales.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_1.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    },
+    {
+        "id": 10,
+        "name": "Maquillaje de Novia Premium",
+        "price": 110,
+        "description": "Maquillaje especial para novias, profesional y de larga duración.",
+        "images": ["https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_1.jpg", "https://ipwluchalibre.com/proyectosweb/estetica/images/manicura_elegante_2.jpg"]
+    }
+]

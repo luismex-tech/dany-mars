@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dany Mars</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+    <h1>DANY MARS Studio de Belleza</h1>
+    <p>Agenda tu cita de forma fácil y rápida</p>
+</header>
+
+<main>
+    <section id="services-gallery" class="gallery"></section>
+
+    <section id="faqs-section" class="faqs">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">¿Cómo reservo mi cita? <span class="icon">+</span></button>
+                <div class="accordion-panel">Seleccione los servicios deseados, cierre el pedido y llene el formulario para elegir fecha y hora.</div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">¿Cuál es el método de pago? <span class="icon">+</span></button>
+                <div class="accordion-panel">Pago únicamente en efectivo al finalizar el servicio.</div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">¿Puedo cancelar o reprogramar? <span class="icon">+</span></button>
+                <div class="accordion-panel">Contáctenos vía WhatsApp para cambios o cancelaciones.</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<button id="cart-toggle" aria-label="Abrir carrito de citas">
+    🛒 <span id="cart-count">0</span>
+</button>
+
+<div id="service-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-content">
+        <button id="modal-close" aria-label="Cerrar modal">&times;</button>
+        <h2 id="modal-title"></h2>
+        <div id="modal-images" class="modal-images"></div>
+        <p id="modal-desc"></p>
+        <div class="modal-controls">
+            <button id="modal-minus" aria-label="Quitar servicio">-</button>
+            <span id="modal-quantity">0</span>
+            <button id="modal-plus" aria-label="Agregar servicio">+</button>
+        </div>
+    </div>
+</div>
+
+<div id="cart-details" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="modal-content">
+        <button id="cart-close" aria-label="Cerrar carrito">&times;</button>
+        <h2 id="cart-title">Resumen de Cita</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+        <button id="finalize-btn" disabled>Finalizar Pedido y Agendar Cita</button>
+    </div>
+</div>
+
+<div id="appointment-form" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="form-title">
+    <div class="modal-content">
+        <button id="form-close" aria-label="Cerrar formulario">&times;</button>
+        <h2 id="form-title">Agendar Cita</h2>
+        <form id="form-steps">
+            <div class="form-step" id="step-1">
+                <label for="appointment-date">Seleccione fecha:</label>
+                <input type="date" id="appointment-date" min="" required />
+                <label for="appointment-time">Seleccione hora:</label>
+                <select id="appointment-time" required><option value="">--Seleccione--</option></select>
+                <button type="button" id="to-step-2" disabled>Siguiente</button>
+            </div>
+            <div class="form-step hidden" id="step-2">
+                <label for="client-name">Nombre completo:</label>
+                <input type="text" id="client-name" required />
+                <label for="client-whatsapp">Número de WhatsApp:</label>
+                <input type="tel" id="client-whatsapp" required maxlength="10" pattern="^\d{10}$" placeholder="Ej. 5551234567" />
+  <div id="whatsapp-warning" style="color: #E77; font-size: .95em; margin-top: 0.5em; display: none;">
+      Por favor, verifica bien tu número porque en éste te vamos a contactar.</div>
+                <button type="button" id="to-step-1">Atrás</button>
+                <button type="button" id="to-step-3" disabled>Siguiente</button>
+            </div>
+            <div class="form-step hidden" id="step-3">
+                <h3>Resumen de Cita</h3>
+                <div id="appointment-summary"></div>
+                <p><strong>Método de pago:</strong> Efectivo al finalizar el servicio.</p>
+                <a href="#" id="whatsapp-send" target="_blank" rel="noopener" style="display:none; margin-top: 1rem; font-weight: 600; color: #5D4E99; text-decoration: underline; cursor: pointer;">
+
+                </a>
+                <button type="button" id="to-step-2-back">Atrás</button>
+                <button type="submit" id="submit-appointment">Confirmar Cita</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
